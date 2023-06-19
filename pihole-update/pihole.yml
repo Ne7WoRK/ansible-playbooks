@@ -1,0 +1,7 @@
+- name: Update pihole
+  hosts: berry
+  become: true
+
+  tasks:
+    - name: Run the pihole update script
+      command: "{{ pihole_update_script }}"
